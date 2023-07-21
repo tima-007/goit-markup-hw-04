@@ -109,7 +109,21 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
+
 .nav-link-index {
+  color: var(--oceanColor);
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 24px 0;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.nav-link-portfolio {
   color: var(--oceanColor);
   position: relative;
   text-decoration: none;
@@ -126,7 +140,7 @@ a {
 .nav-link:focus {
   color: var(--oceanColor);
 }
-
+.nav-link-portfolio::after,
 .nav-link-index::after,
 .nav-link::after {
   position: absolute;
@@ -142,7 +156,7 @@ a {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.nav-link-portfolio:hover::after,
 .nav-link-index:hover::after,
 .nav-link:hover::after {
   opacity: 1;
