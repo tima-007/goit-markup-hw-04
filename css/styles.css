@@ -175,11 +175,13 @@ a {
       rgba(46, 47, 66, 0.7)
     ),
     url(/images/people-office.jpg);
+  max-width: 1440px;
+  margin: 0 auto;
   background-position: center;
+
   background-repeat: no-repeat;
   background-size: cover;
 
-  max-width: 1440px;
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -563,16 +565,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 264px;
+  height: 112px;
+
+  border-radius: 4px;
+  background: var(--cloudColor);
 }
 
 .ourteam-svg {
   display: flex;
-  width: 264px;
-  height: 112px;
+  width: 64px;
+  height: 64px;
   background-color: var(--cloudColor);
-  border-radius: 4px;
-  margin-bottom: 8px;
-  padding: 24px 100px;
 }
 
 .modal {
