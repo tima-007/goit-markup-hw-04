@@ -557,9 +557,14 @@ a {
   margin-right: 120px;
 }
 
-.footer-social-links {
+.footer-social-list {
   display: flex;
   gap: 24px;
+}
+
+.footer-social-list-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .team-svg.ftr:hover,
