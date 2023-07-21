@@ -361,6 +361,8 @@ a {
   align-items: center;
   justify-content: center;
   gap: 24px;
+
+  width: calc((100% - 72px) / 4);
 }
 
 .team-svg:hover,
@@ -571,13 +573,6 @@ a {
 
   border-radius: 4px;
   background: var(--cloudColor);
-}
-
-.ourteam-svg {
-  display: flex;
-  width: 64px;
-  height: 64px;
-  background-color: var(--cloudColor);
 }
 
 .modal {
