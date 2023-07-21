@@ -50,7 +50,7 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* --------------------------------------------------------- */
+/* -------------------- Header ------------------- */
 
 .header {
   background-color: var(--whiteColor);
@@ -96,7 +96,7 @@ a {
   padding: 24px 0;
 }
 
-/* -----------------------  Footer  Navigation  -----------------------*/
+/* -----------------------  Navigation  -----------------------*/
 .nav-link {
   position: relative;
   text-decoration: none;
