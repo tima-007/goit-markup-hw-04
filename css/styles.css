@@ -332,11 +332,12 @@ a {
 }
 
 .team-names-container {
-  padding: 32px 16px 8px;
+  padding: 32px 0;
 }
 .team-names,
 .team-names-text {
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .team-svg {
@@ -355,12 +356,11 @@ a {
   display: inline-flex;
 }
 
-.team-social-links {
+.team-social-list {
   display: flex;
-  gap: 24px;
   align-items: center;
   justify-content: center;
-  padding-bottom: 24px;
+  gap: 24px;
 }
 
 .team-svg:hover,
