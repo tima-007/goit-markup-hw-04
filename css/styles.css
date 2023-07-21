@@ -55,8 +55,9 @@ a {
 .header {
   background-color: var(--whiteColor);
   border-bottom: 1px solid var(--cornflowerColor);
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-cont {
@@ -133,11 +134,11 @@ a {
   border-radius: 2px;
   content: "";
   background-color: var(--oceanColor);
-  bottom: 1px;
+  bottom: -1px;
   left: 0;
   transform: translateY(100%);
   opacity: 0;
-  transition: color opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -158,8 +159,7 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
 
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover,
 .address-link:focus {
@@ -567,6 +567,7 @@ a {
   justify-content: center;
   width: 264px;
   height: 112px;
+  margin-bottom: 8px;
 
   border-radius: 4px;
   background: var(--cloudColor);
