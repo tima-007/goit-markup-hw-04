@@ -96,7 +96,7 @@ a {
   padding: 24px 0;
 }
 
-/* ----------------------- Navigation -----------------------*/
+/* -----------------------  Footer  Navigation  -----------------------*/
 .nav-link {
   position: relative;
   text-decoration: none;
@@ -126,25 +126,25 @@ a {
 .nav-link:focus {
   color: var(--oceanColor);
 }
+
 .nav-link-index::after,
 .nav-link::after {
   position: absolute;
-  width: 0%;
+  width: 100%;
   height: 4px;
   border-radius: 2px;
   content: "";
   background-color: var(--oceanColor);
   bottom: -1px;
   left: 0;
-  transform: translateY(100%);
+
   opacity: 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link-index:hover::after,
 .nav-link:hover::after {
-  width: 100%;
   opacity: 1;
 }
 
@@ -268,6 +268,18 @@ a {
   color: var(--slateColor);
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.strategy-svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 264px;
+  height: 112px;
+  margin-bottom: 8px;
+
+  border-radius: 4px;
+  background: var(--cloudColor);
 }
 
 /* --------------- Section 3 ---------------- */
@@ -567,24 +579,28 @@ a {
   flex-direction: column;
 }
 
-.team-svg.ftr:hover,
-.team-svg.ftr:focus {
-  background-color: var(--greenColor);
-}
-
-/* ---------------- SVG-Section-1---------------------- */
-
-.ourteam-svg-container {
+.footer-social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 264px;
-  height: 112px;
-  margin-bottom: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--irisColor);
 
-  border-radius: 4px;
-  background: var(--cloudColor);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.team-social-svg {
+  fill: var(--cloudColor);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--greenColor);
+}
+
+/* --------------- Modal -------------------- */
 
 .modal {
   top: 80px;
