@@ -2,7 +2,7 @@
   --irisColor: #4d5ae5;
   --oceanColor: #404bbf;
   --navyBlueColor: #2e2f42;
-  --navyBlueModalColor: #2E2F42;
+  --navyBlueModalColor: #2e2f42;
   --slateColor: #434455;
   --cloudColor: #f4f4fd;
   --grayColor: #2e2f42;
@@ -55,6 +55,8 @@ a {
 .header {
   background-color: var(--whiteColor);
   border-bottom: 1px solid var(--cornflowerColor);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 }
 
 .header-cont {
@@ -106,10 +108,24 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
+.nav-link-index {
+  color: var(--oceanColor);
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 24px 0;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--oceanColor);
 }
+.nav-link-index::after,
 .nav-link::after {
   position: absolute;
   width: 0%;
@@ -117,19 +133,21 @@ a {
   border-radius: 2px;
   content: "";
   background-color: var(--oceanColor);
-  bottom: 0;
+  bottom: 1px;
   left: 0;
   transform: translateY(100%);
-
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
+  opacity: 0;
+  transition: color opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.nav-link-index:hover::after,
 .nav-link:hover::after {
   width: 100%;
+  opacity: 1;
 }
 
-/* Address */
+/* ------------------- Address ----------------------*/
 .address-list {
   display: flex;
   font-style: normal;
@@ -157,9 +175,11 @@ a {
       rgba(46, 47, 66, 0.7)
     ),
     url(/images/people-office.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  max-width: 1440px;
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -192,8 +212,7 @@ a {
   height: 56px;
   margin: 0 auto;
 
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -556,10 +575,6 @@ a {
   padding: 24px 100px;
 }
 
-
-
-
-
 .modal {
   top: 80px;
   left: 50%;
@@ -568,12 +583,11 @@ a {
   height: 584px;
   border-radius: 4px;
   background-color: var(--dairyColor);
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 
   position: fixed;
 }
-
-
 
 .modal-backdrop {
   position: fixed;
@@ -599,7 +613,6 @@ a {
   fill: var(--whiteColor);
   background-color: var(--oceanColor);
 }
-
 
 .close-btn {
   display: flex;
