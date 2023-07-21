@@ -389,25 +389,30 @@ a {
   width: calc((100% - 120px) / 6);
 }
 
+.our-customers-svg {
+  fill: currentColor;
+}
+
 .our-customers-link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 168px;
   height: 88px;
+  color: var(--lightslateColor);
 
   border-radius: 4px;
   border: 1px solid var(--lightslateColor);
-  fill: var(--lightslateColor);
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-customers-link:hover,
 .our-customers-link:focus {
   fill: var(--oceanColor);
   border: 1px solid var(--oceanColor);
+  color: var(--oceanColor);
 }
 
 /* ------------------ Portfolio page -------------------*/
