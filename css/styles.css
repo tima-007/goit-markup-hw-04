@@ -547,6 +547,10 @@ a {
   align-items: baseline;
 }
 
+.footer-logo-container {
+  margin-right: 120px;
+}
+
 .footer-social-media-text {
   color: var(--whiteColor);
   font-weight: 500;
@@ -575,12 +579,11 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   max-width: 264px;
-  margin-right: 120px;
 }
 
 .footer-social-list {
   display: flex;
-  gap: 24px;
+  gap: 16px;
 }
 
 .footer-social-list-container {
