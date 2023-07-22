@@ -655,18 +655,27 @@ a {
   height: 24px;
   border-radius: 50%;
   cursor: pointer;
+  padding: 0;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-svg {
-  color: var(--navyBlueColor);
+  fill: var(--navyBlueColor);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn:active {
-  border: 1px solid var(--oceanColor);
-  fill: var(--whiteColor);
+.close-btn:hover,
+.close-btn:focus {
+  border: none;
   background-color: var(--oceanColor);
 }
 
+.close-svg:hover,
+.close-svg:focus {
+  fill: var(--whiteColor);
+}
 /* --------------------- */
 
 .is-hidden {
