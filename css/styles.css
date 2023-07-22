@@ -620,12 +620,13 @@ a {
   top: 0;
   left: 0;
 
-  background-color: rgba(46, 47, 66, 0.5);
+  background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-window {
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -641,30 +642,32 @@ a {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-svg {
-  display: block;
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: var(--cornflowerColor);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
-  padding: 7px;
   border-radius: 50%;
-  border: 1px solid var(--lightslateColor);
-  background-color: var(--cornflowerColor);
-  overflow: inherit;
-  fill: var(--navyBlueColor);
+  cursor: pointer;
 }
-.close-svg:active {
+
+.close-svg {
+  color: var(--navyBlueColor);
+}
+
+.close-btn:active {
   border: 1px solid var(--oceanColor);
   fill: var(--whiteColor);
   background-color: var(--oceanColor);
 }
 
-.close-btn {
-  display: flex;
-  border: none;
-  position: absolute;
-  background-color: transparent;
-  margin: 24px 24px auto auto;
-}
+/* --------------------- */
 
 .is-hidden {
   opacity: 0;
