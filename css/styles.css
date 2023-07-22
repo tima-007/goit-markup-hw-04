@@ -542,6 +542,11 @@ a {
   padding: 100px 0;
 }
 
+.footer-content-container {
+  display: flex;
+  align-items: baseline;
+}
+
 .footer-social-media-text {
   color: var(--whiteColor);
   font-weight: 500;
@@ -550,15 +555,11 @@ a {
   margin-bottom: 16px;
 }
 
-.footer-content-container {
-  display: flex;
-}
-
-.footer-logo-container {
+/* .footer-logo-container {
   display: inline-flex;
   flex-direction: column;
   padding-bottom: 16px;
-}
+} */
 
 .footer-nav-logo {
   color: var(--irisColor);
