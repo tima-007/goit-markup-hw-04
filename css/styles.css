@@ -484,54 +484,66 @@ a {
   margin-bottom: 72px;
 }
 
+/* -------------------- Portfolio links --------------------  */
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 24px;
   row-gap: 48px;
+  column-gap: 24px;
 }
 
-.portfolio-item-text {
-  padding: 32px 16px;
-  border: 1px solid var(--cornflowerColor);
+.portfolio-item {
+  max-width: 360px;
+  width: calc((100% - 48 px) / 3);
+
   border-top: none;
+  border: 1px solid var(--cornflower, #e7e9fc);
+  background: var(--white, #fff);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link {
-  position: relative;
-  overflow: hidden;
-  width: calc((100% - 48px) / 3);
-
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
-}
-
-.portfolio-link:hover {
+.portfolio-item:hover,
+.portfolio-item:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
-.overlay {
+
+.portfolio-link {
+  display: block;
+}
+
+.portfolio-item-text-container {
+  margin: 32px 16px;
+}
+
+.portfolio-img {
+  overflow: hidden;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-text {
   position: absolute;
   background-color: var(--irisColor);
+  color: var(--cloudColor);
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 40px 32px 0 32px;
 
-  transform: translatey(100%);
+  transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-link:hover .overlay {
-  transform: translatey(0);
-}
 
-.overlay-text {
-  color: var(--cloudColor);
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  padding: 40px 32px;
+.img-container:hover .overlay-text {
+  transform: translateY(0%);
 }
 
 /* --------------- Footer ------------------- */
@@ -662,7 +674,6 @@ a {
 }
 
 .close-svg {
-  fill: var(--navyBlueColor);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -670,7 +681,7 @@ a {
 .close-btn:focus {
   border: none;
   background-color: var(--oceanColor);
-  fill: var(--whiteColor);
+  fill: #fff;
 }
 
 .close-svg:hover,
