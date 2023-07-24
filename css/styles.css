@@ -517,6 +517,10 @@ a {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.portfolio-link:focus .overlay-text {
+  transform: translateY(0%);
+}
+
 .portfolio-item-text-container {
   margin: 32px 16px;
 }
@@ -548,8 +552,7 @@ a {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.img-container:hover .overlay-text,
-.img-container:focus .overlay-text {
+.img-container:hover .overlay-text {
   transform: translateY(0%);
 }
 
