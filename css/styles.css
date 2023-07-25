@@ -92,12 +92,13 @@ a {
 
 .nav-list {
   display: flex;
+  align-items: center;
   gap: 40px;
-  padding: 24px 0;
 }
 
 /* -----------------------  Navigation  -----------------------*/
 .nav-link {
+  display: block;
   position: relative;
   text-decoration: none;
   color: var(--navyBlueColor);
@@ -111,6 +112,7 @@ a {
 
 .nav-link-index {
   color: var(--oceanColor);
+  display: block;
   position: relative;
   text-decoration: none;
   font-weight: 500;
@@ -123,6 +125,7 @@ a {
 
 .nav-link-portfolio {
   color: var(--oceanColor);
+  display: block;
   position: relative;
   text-decoration: none;
   font-weight: 500;
